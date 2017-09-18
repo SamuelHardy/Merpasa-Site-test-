@@ -1,0 +1,155 @@
+body {
+  font-family: Roboto Condensed Bold, sans-serif;
+}
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.flip-container {
+  width: 20%;
+  height: 980px;
+  background-repeat: no-repeat;
+}
+
+a.button-open {
+  width: 95%;
+  height: 120px;
+  display: block;
+  margin: 50px 5px auto 10px;
+  padding-top: 5%;
+
+  color: #fff;
+  text-decoration: none;
+  font-size: 27px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+  width: 100%;
+  height: 210px;
+  background-color: #1a48a6;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+.phone {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 29px;
+  margin: 5% auto;
+}
+.logo {
+  width: 33%;
+  height: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #cdd9cc;
+}
+.logo img {
+  display: flex;
+  justify-content: center;
+  margin: 10% auto;
+}
+.e-mail {
+  width: 33%;
+  height: 100%;
+  font-size: 24px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  margin: 5% auto;
+}
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+
+	border: 1px solid #ccc;
+}
+
+	.flip-container:hover .flipper,
+  .flip-container.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 100%;
+	height: 100%;
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+  width: 100%;
+  height: 980px;
+}
+
+.front {
+	z-index: 2;
+}
+
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+  background-color:#5c5d5c;
+}
+
+.back ul {
+  display: block;
+  margin-top: 25px;
+  width: 80%;
+}
+.back ul li {
+  text-transform: uppercase;
+  list-style-type: none;
+}
+.back ul li a {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-family: Roboto Condensed Regular, sans-serif;
+  text-transform: uppercase;
+}
+.back ul li a:hover {
+  color: #3f79bd;
+}
